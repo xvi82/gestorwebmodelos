@@ -1,0 +1,148 @@
+.titulo h1 {
+  border: 10px solid white;
+  margin: auto;
+  width: 30%;
+  padding: 55px;
+  color: white;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-image: url("tsm1.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+.formulario {
+  margin: auto;
+  margin-top: 40px;
+  width: 1270px;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.7)
+}
+
+label {
+    font-family: 'Raleway', sans-serif;
+    text-weigth: bold;
+    font-size: 150%;
+}
+
+legend {
+    font-family: 'Raleway', sans-serif;
+    text-weigth: bold;
+    font-size: 120%;
+}
+
+input, select, textarea {
+  padding:10px;
+  margin:10px 0;
+  border:0;
+  width: 80%;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  resize: none;
+  border-radius:10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+select {
+    width: 86%;
+}
+
+table {
+    width: 1150px;
+    float: left;
+    margin: 20px 30px;
+}
+
+.seleccion{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #000000;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Raleway',sans-serif;
+    font-weight:300;
+    font-size: 20px;
+    color:#000000;
+    text-align:center;
+    transition: all 0.2s;
+    background: transparent;
+    width: 300px;
+}
+.seleccion:hover{
+    color:#000000;
+    background-color:rgba(0,0,0,0.1);
+}
+@media all and (max-width:30em){
+    .seleccion{
+        display:block;
+        margin:0.4em auto;
+    }
+}
+p {
+    text-align:center
+}
+
+input[type=submit], input[type=reset] {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #000000;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Raleway',sans-serif;
+    font-weight:300;
+    color:#000000;
+    text-align:center;
+    transition: all 0.2s;
+    background: transparent;
+    width: 300px;
+}
+
+input[type=submit]:hover{
+    color:#000000;
+    background-color: rgba(0,0,0,0.1);
+}
+@media all and (max-width:30em){
+    input[type=submit]{
+        display:block;
+        margin:0.4em auto;
+    }
+}
+
+input[type=reset]:hover{
+    color:#000000;
+    background-color: rgba(0,0,0,0.1);
+}
+@media all and (max-width:30em){
+    input[type=reset]{
+        display:block;
+        margin:0.4em auto;
+    }
+}
+
+.clases {
+  height: 33.33%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tipos {
+  height: 33.33%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

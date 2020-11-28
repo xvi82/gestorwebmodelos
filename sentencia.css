@@ -1,0 +1,49 @@
+.titulo h1 {
+  border: 10px solid white;
+  margin: auto;
+  width: 30%;
+  padding: 60px;
+  color: white;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+}
+
+h3, h4 {
+    text-align: center;
+    text-weigth: bold;
+    font-size: 160%;
+}
+
+.resol {
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7)
+}
+
+.resol p, li {
+    text-align: justify;
+    margin: 5%;
+    font-size: 160%;
+    margin-top: 45px;
+    margin-bottom: 45px
+    }
+
+body {
+  background-image: url("tsm1.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed;
+  background-size: cover;
+  }
+
+#firma {
+    font-weigth: bold;
+    opacity: 0.5;
+    text-align: right;
+    text-color: gray;
+    margin-top: 0px;
+    margin-bottom: 0px
+}

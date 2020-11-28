@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Página de selección de Modelos</title>
+</head>
+<body>
+    <div class="titulo">
+        <h1>Selección y automatización de Modelos estereotipados</h1>
+    </div>
+    <div class="formulario">
+            <div class="clases">
+                <button id="c1" class="seleccion">Extinción por voluntad del trabajador</button>
+                <button id="c3" class="seleccion" style="display: none">Atras</button>
+                <button id="c2" class="seleccion">Impugnación de recargo de prestaciones</button>
+                </div><p></p>
+            <div class="tipos">
+                <button id="f1" class="seleccion" style="display: none">Falta de pago</button>
+                <button id="f2" class="seleccion" style="display: none">Retraso en el pago</button>
+                <button id="f3" class="seleccion" style="display: none">Modificación condiciones</button>
+                <button id="f4" class="seleccion" style="display: none">Desestimatoria</button>
+                <button id="f5" class="seleccion" style="display: none">Estimatoria</button>
+                <button id="f6" class="seleccion" style="display: none">Estimatoria parcial</button></div><p></p>
+        <form class="form-horizontal" id="form1" action="faltadepago/faltadepago.html" method="GET" style="display: none">
+        <fieldset>
+            <legend>Extinción por falta de pago</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><div class="form-group"><label class="col-md-4 control-label" for="actor">Nombre del actor</label></div>
+                        </td><td><div class="col-md-6"><input id="actor" name="actor" type="text" placeholder="Actor" class="form-control input-md" required=""></div></td>
+
+                        <td><div class="form-group">  <label class="col-md-4 control-label" for="demandado">Nombre del demandado</label> </div></td>
+                        <td><div class="col-md-6"> <input id="demandado" name="demandado" type="text" placeholder="Demandado" class="form-control input-md">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="salario">Salario diario</label> </div></td>
+                        <td><div class="col-md-6">   <input id="salario" name="salario" type="text" placeholder="Salario diario" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="categoria">Categoría Profesional</label></div></td>
+                        <td><div class="col-md-6">   <input id="categoria" name="categoria" type="text" placeholder="Categoría Profesional" class="form-control input-md">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="actividad">Actividad de la empresa</label> </div></td>
+                        <td><div class="col-md-6">   <input id="actividad" name="actividad" type="text" placeholder="Actividad de la empresa" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="semac">Resultado del SEMAC</label> </div></td>
+                        <td> <div class="col-md-6">     <select id="semac" name="semac" class="form-control">  <option value="sin avenencia">Sin avenencia</option>  <option value="sin efecto">Sin efecto</option> </select>  </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="antig">Antiguedad</label> </div></td>
+                        <td><div class="col-md-6">   <input type="date" id="antig" name="antig">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fechsemac">Fecha del SEMAC</label> </div></td>
+                        <td> <div class="col-md-6">     <input type="date" id="fechsemac" name="fechsemac" min="2015-01-01">  </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="caso">En el presente caso...</label></div></td>
+                        <td>  <div class="col-md-4">     <textarea class="form-control" id="caso" name="caso" rows="5"></textarea>   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="hechos">Hechos Probados</label> </div></td>
+                        <td>  <div class="col-md-4">     <textarea class="form-control" id="hechos" name="hechos" rows="5"></textarea>   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group"> <label class="col-md-4 control-label" for="prueba">Prueba Practicada</label> </div> </td>
+                        <td><div class="col-md-4"> <select id="prueba" name="prueba" class="form-control" multiple="multiple"> <option value="Testifical">Testifical</option>
+                            <option value="Interrogatorio de la parte actora">Interrogatorio actora</option>
+                            <option value="Interrogatorio de la parte demandada">Interrogatorio demandada</option>
+                            <option value="Pericial">Pericial</option>
+                            <option value="Documental">Documental</option>
+                        </select>
+                        </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="nocobra">Desde cuando no cobra</label></div></td>
+                        <td>  <div class="col-md-6">   <input id="nocobra" name="nocobra" type="text" placeholder="Desde cuando no cobra...." class="form-control input-md">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="numero">Numero del Procedimiento</label> </div></td>
+                        <td><div class="col-md-6">   <input id="numero" name="numero" type="text" placeholder="Numero del Procedimiento" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="ano">Año del Procedimiento</label></div></td>
+                        <td><div class="col-md-6">   <input id="ano" name="ano" type="text" placeholder="Año del Procedimiento" class="form-control input-md">   </div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <br>
+        <p>
+        <input type="submit" value="Crear Modelo">
+        <input type="reset" value="Limpiar Campos">
+        </form>
+    <form class="form-horizontal" id="form2" action="retrasopago/retrasopago.html" method="GET" style="display: none">
+        <fieldset>
+            <legend>Extinción por retraso en el pago</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><div class="form-group"><label class="col-md-4 control-label" for="actor">Nombre del actor</label></div>
+                        </td><td><div class="col-md-6"><input id="actor" name="actor" type="text" placeholder="Actor" class="form-control input-md" required=""></div></td>
+
+                        <td><div class="form-group">  <label class="col-md-4 control-label" for="demandado">Nombre del demandado</label> </div></td>
+                        <td><div class="col-md-6"> <input id="demandado" name="demandado" type="text" placeholder="Demandado" class="form-control input-md">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="salario">Salario diario</label> </div></td>
+                        <td><div class="col-md-6">   <input id="salario" name="salario" type="text" placeholder="Salario diario" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="categoria">Categoría Profesional</label></div></td>
+                        <td><div class="col-md-6">   <input id="categoria" name="categoria" type="text" placeholder="Categoría Profesional" class="form-control input-md">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="actividad">Actividad de la empresa</label> </div></td>
+                        <td><div class="col-md-6">   <input id="actividad" name="actividad" type="text" placeholder="Actividad de la empresa" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="semac">Resultado del SEMAC</label> </div></td>
+                        <td> <div class="col-md-6">     <select id="semac" name="semac" class="form-control">  <option value="sin avenencia">Sin avenencia</option>  <option value="sin efecto">Sin efecto</option> </select>  </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="antig">Antiguedad</label> </div></td>
+                        <td><div class="col-md-6">   <input type="date" id="antig" name="antig">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fechsemac">Fecha del SEMAC</label> </div></td>
+                        <td> <div class="col-md-6">     <input type="date" id="fechsemac" name="fechsemac" min="2015-01-01">  </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="caso">En el presente caso...</label></div></td>
+                        <td>  <div class="col-md-4">     <textarea class="form-control" id="caso" name="caso" rows="5"></textarea>   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="hechos">Hechos Probados</label> </div></td>
+                        <td>  <div class="col-md-4">     <textarea class="form-control" id="hechos" name="hechos" rows="5"></textarea>   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group"> <label class="col-md-4 control-label" for="prueba">Prueba Practicada</label> </div> </td>
+                        <td><div class="col-md-4"> <select id="prueba" name="prueba" class="form-control" multiple="multiple"> <option value="Testifical">Testifical</option>
+                            <option value="Interrogatorio de la parte actora">Interrogatorio actora</option>
+                            <option value="Interrogatorio de la parte demandada">Interrogatorio demandada</option>
+                            <option value="Pericial">Pericial</option>
+                            <option value="Documental">Documental</option>
+                        </select>
+                        </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="retraso">Retraso medio</label></div></td>
+                        <td>  <div class="col-md-6">   <input id="retraso" name="retraso" type="text" placeholder="Retraso medio en el abono" class="form-control input-md">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="numero">Numero del Procedimiento</label> </div></td>
+                        <td><div class="col-md-6">   <input id="numero" name="numero" type="text" placeholder="Numero del Procedimiento" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="ano">Año del Procedimiento</label></div></td>
+                        <td><div class="col-md-6">   <input id="ano" name="ano" type="text" placeholder="Año del Procedimiento" class="form-control input-md">   </div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <br>
+        <p>
+        <input type="submit" value="Crear Modelo">
+        <input type="reset" value="Limpiar Campos">
+        </form>
+        <form class="form-horizontal" id="form3" action="modificacion/modificacion.html" method="GET" style="display: none">
+        <fieldset>
+            <legend>Extinción por modificación de condiciones laborales</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><div class="form-group"><label class="col-md-4 control-label" for="actor">Nombre del actor</label></div>
+                        </td><td><div class="col-md-6"><input id="actor" name="actor" type="text" placeholder="Actor" class="form-control input-md" required=""></div></td>
+
+                        <td><div class="form-group">  <label class="col-md-4 control-label" for="demandado">Nombre del demandado</label> </div></td>
+                        <td><div class="col-md-6"> <input id="demandado" name="demandado" type="text" placeholder="Demandado" class="form-control input-md">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="salario">Salario diario</label> </div></td>
+                        <td><div class="col-md-6">   <input id="salario" name="salario" type="text" placeholder="Salario diario" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="categoria">Categoría Profesional</label></div></td>
+                        <td><div class="col-md-6">   <input id="categoria" name="categoria" type="text" placeholder="Categoría Profesional" class="form-control input-md">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="actividad">Actividad de la empresa</label> </div></td>
+                        <td><div class="col-md-6">   <input id="actividad" name="actividad" type="text" placeholder="Actividad de la empresa" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="semac">Resultado del SEMAC</label> </div></td>
+                        <td> <div class="col-md-6">     <select id="semac" name="semac" class="form-control">  <option value="sin avenencia">Sin avenencia</option>  <option value="sin efecto">Sin efecto</option> </select>  </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="antig">Antiguedad</label> </div></td>
+                        <td><div class="col-md-6">   <input type="date" id="antig" name="antig">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fechsemac">Fecha del SEMAC</label> </div></td>
+                        <td> <div class="col-md-6">     <input type="date" id="fechsemac" name="fechsemac" min="2015-01-01">  </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="caso">En el presente caso...</label></div></td>
+                        <td>  <div class="col-md-4">     <textarea class="form-control" id="caso" name="caso" rows="5"></textarea>   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="hechos">Hechos Probados</label> </div></td>
+                        <td>  <div class="col-md-4">     <textarea class="form-control" id="hechos" name="hechos" rows="5"></textarea>   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group"> <label class="col-md-4 control-label" for="prueba">Prueba Practicada</label> </div> </td>
+                        <td><div class="col-md-4"> <select id="prueba" name="prueba" class="form-control" multiple="multiple"> <option value="Testifical">Testifical</option>
+                            <option value="Interrogatorio de la parte actora">Interrogatorio actora</option>
+                            <option value="Interrogatorio de la parte demandada">Interrogatorio demandada</option>
+                            <option value="Pericial">Pericial</option>
+                            <option value="Documental">Documental</option>
+                        </select>
+                        </div></td>
+
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="numero">Numero del Procedimiento</label> </div></td>
+                        <td><div class="col-md-6">   <input id="numero" name="numero" type="text" placeholder="Numero del Procedimiento" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="ano">Año del Procedimiento</label></div></td>
+                        <td><div class="col-md-6">   <input id="ano" name="ano" type="text" placeholder="Año del Procedimiento" class="form-control input-md">   </div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <br>
+        <p>
+        <input type="submit" value="Crear Modelo">
+        <input type="reset" value="Limpiar Campos">
+        </form>
+        <form class="form-horizontal" id="form4" action="recargodesestim/recargodesestim.html" method="GET" style="display: none">
+        <fieldset>
+            <legend>Impugnación de recargo de prestaciones desestimatoria</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><div class="form-group"><label class="col-md-4 control-label" for="actor">Nombre del actor</label></div>
+                        </td><td><div class="col-md-6"><input id="actor" name="actor" type="text" placeholder="Actor" class="form-control input-md" required=""></div></td>
+
+                        <td><div class="form-group">  <label class="col-md-4 control-label" for="demandado">Nombre del demandado</label> </div></td>
+                        <td><div class="col-md-6"> <input id="demandado" name="demandado" type="text" placeholder="Demandado" class="form-control input-md">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fechaactainspeccion">Fecha del acta</label> </div></td>
+                        <td><div class="col-md-6">   <input type="date" id="fechaactainspeccion" name="fechaactainspeccion">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fecharesolucionrecargo">Fecha de la Resolución</label></div></td>
+                        <td><div class="col-md-6">   <input type="date" id="fecharesolucionrecargo" name="fecharesolucionrecargo">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="porcentajerecargo">Porcentaje de recargo</label> </div></td>
+                        <td><div class="col-md-6">   <input id="porcentajerecargo" name="porcentajerecargo" type="number" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="articulosinfringidos">Artículos infringidos</label> </div></td>
+                        <td> <div class="col-md-6">     <input id="articulosinfringidos" name="articulosinfringidos" type="text" class="form-control input-md">  </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fechareclamacionprevia">Fecha Reclamación Previa</label> </div></td>
+                        <td><div class="col-md-6">   <input type="date" id="fechareclamacionprevia" name="fechareclamacionprevia">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fecharesolucionreclamacionprevia">Resolución Reclamación Previa</label> </div></td>
+                        <td> <div class="col-md-6">     <input type="date" id="fecharesolucionreclamacionprevia" name="fecharesolucionreclamacionprevia">  </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="caso">En el presente caso...</label></div></td>
+                        <td>  <div class="col-md-4">     <textarea class="form-control" id="caso" name="caso" rows="5"></textarea>   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="hechos">Hechos Probados</label> </div></td>
+                        <td>  <div class="col-md-4">     <textarea class="form-control" id="hechos" name="hechos" rows="5"></textarea>   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group"> <label class="col-md-4 control-label" for="prueba">Prueba Practicada</label> </div> </td>
+                        <td><div class="col-md-4"> <select id="prueba" name="prueba" class="form-control" multiple="multiple"> <option value="Testifical">Testifical</option>
+                            <option value="Interrogatorio de la parte actora">Interrogatorio actora</option>
+                            <option value="Interrogatorio de la parte demandada">Interrogatorio demandada</option>
+                            <option value="Pericial">Pericial</option>
+                            <option value="Documental">Documental</option>
+                        </select>
+                        </div></td>
+
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="numero">Numero del Procedimiento</label> </div></td>
+                        <td><div class="col-md-6">   <input id="numero" name="numero" type="text" placeholder="Numero del Procedimiento" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="ano">Año del Procedimiento</label></div></td>
+                        <td><div class="col-md-6">   <input id="ano" name="ano" type="text" placeholder="Año del Procedimiento" class="form-control input-md">   </div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <br>
+        <p>
+        <input type="submit" value="Crear Modelo">
+        <input type="reset" value="Limpiar Campos">
+        </form>
+        <form class="form-horizontal" id="form5" action="recargoestim/recargoestim.html" method="GET" style="display: none">
+        <fieldset>
+            <legend>Impugnación de recargo de prestaciones estimatoria</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><div class="form-group"><label class="col-md-4 control-label" for="actor">Nombre del actor</label></div>
+                        </td><td><div class="col-md-6"><input id="actor" name="actor" type="text" placeholder="Actor" class="form-control input-md" required=""></div></td>
+
+                        <td><div class="form-group">  <label class="col-md-4 control-label" for="demandado">Nombre del demandado</label> </div></td>
+                        <td><div class="col-md-6"> <input id="demandado" name="demandado" type="text" placeholder="Demandado" class="form-control input-md">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fechaactainspeccion">Fecha del acta</label> </div></td>
+                        <td><div class="col-md-6">   <input type="date" id="fechaactainspeccion" name="fechaactainspeccion">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fecharesolucionrecargo">Fecha de la Resolución</label></div></td>
+                        <td><div class="col-md-6">   <input type="date" id="fecharesolucionrecargo" name="fecharesolucionrecargo">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="porcentajerecargo">Porcentaje de recargo</label> </div></td>
+                        <td><div class="col-md-6">   <input id="porcentajerecargo" name="porcentajerecargo" type="number" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="articulosinfringidos">Artículos infringidos</label> </div></td>
+                        <td> <div class="col-md-6">     <input id="articulosinfringidos" name="articulosinfringidos" type="text" class="form-control input-md">  </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fechareclamacionprevia">Fecha Reclamación Previa</label> </div></td>
+                        <td><div class="col-md-6">   <input type="date" id="fechareclamacionprevia" name="fechareclamacionprevia">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fecharesolucionreclamacionprevia">Resolución Reclamación Previa</label> </div></td>
+                        <td> <div class="col-md-6">     <input type="date" id="fecharesolucionreclamacionprevia" name="fecharesolucionreclamacionprevia">  </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="caso">En el presente caso...</label></div></td>
+                        <td>  <div class="col-md-4">     <textarea class="form-control" id="caso" name="caso" rows="5"></textarea>   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="hechos">Hechos Probados</label> </div></td>
+                        <td>  <div class="col-md-4">     <textarea class="form-control" id="hechos" name="hechos" rows="5"></textarea>   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group"> <label class="col-md-4 control-label" for="prueba">Prueba Practicada</label> </div> </td>
+                        <td><div class="col-md-4"> <select id="prueba" name="prueba" class="form-control" multiple="multiple"> <option value="Testifical">Testifical</option>
+                            <option value="Interrogatorio de la parte actora">Interrogatorio actora</option>
+                            <option value="Interrogatorio de la parte demandada">Interrogatorio demandada</option>
+                            <option value="Pericial">Pericial</option>
+                            <option value="Documental">Documental</option>
+                        </select>
+                        </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="razonestim">Fundamentos estimatoria</label> </div></td>
+                        <td> <div class="col-md-6">     <select id="razonestim" name="razonestim" class="form-control">  <option value="por la fuerza mayor operada al tiempo del accidente, esto es, un evento extraño al círculo o ámbito de la actividad del trabajador y de la empresa, que rompe el nexo de causalidad">Fuerza Mayor</option>  <option value="por su acaecimiento fortuito, esto es, un hecho independiente de la voluntad del deudor de seguridad (la empresa), imprevisible e inevitable">Caso fortutito</option> </select>  </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="numero">Numero del Procedimiento</label> </div></td>
+                        <td><div class="col-md-6">   <input id="numero" name="numero" type="text" placeholder="Numero del Procedimiento" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="ano">Año del Procedimiento</label></div></td>
+                        <td><div class="col-md-6">   <input id="ano" name="ano" type="text" placeholder="Año del Procedimiento" class="form-control input-md">   </div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <br>
+        <p>
+        <input type="submit" value="Crear Modelo">
+        <input type="reset" value="Limpiar Campos">
+        </form>
+        <form class="form-horizontal" id="form6" action="recargoestimparc/recargoestimparc.html" method="GET" style="display: none">
+        <fieldset>
+            <legend>Impugnación de recargo de prestaciones estimatoria parcial</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><div class="form-group"><label class="col-md-4 control-label" for="actor">Nombre del actor</label></div>
+                        </td><td><div class="col-md-6"><input id="actor" name="actor" type="text" placeholder="Actor" class="form-control input-md" required=""></div></td>
+
+                        <td><div class="form-group">  <label class="col-md-4 control-label" for="demandado">Nombre del demandado</label> </div></td>
+                        <td><div class="col-md-6"> <input id="demandado" name="demandado" type="text" placeholder="Demandado" class="form-control input-md">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fechaactainspeccion">Fecha del acta</label> </div></td>
+                        <td><div class="col-md-6">   <input type="date" id="fechaactainspeccion" name="fechaactainspeccion">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fecharesolucionrecargo">Fecha de la Resolución</label></div></td>
+                        <td><div class="col-md-6">   <input type="date" id="fecharesolucionrecargo" name="fecharesolucionrecargo">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="porcentajerecargo">Porcentaje de recargo</label> </div></td>
+                        <td><div class="col-md-6">   <input id="porcentajerecargo" name="porcentajerecargo" type="number" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="articulosinfringidos">Artículos infringidos</label> </div></td>
+                        <td> <div class="col-md-6">     <input id="articulosinfringidos" name="articulosinfringidos" type="text" class="form-control input-md">  </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fechareclamacionprevia">Fecha Reclamación Previa</label> </div></td>
+                        <td><div class="col-md-6">   <input type="date" id="fechareclamacionprevia" name="fechareclamacionprevia">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="fecharesolucionreclamacionprevia">Resolución Reclamación Previa</label> </div></td>
+                        <td> <div class="col-md-6">     <input type="date" id="fecharesolucionreclamacionprevia" name="fecharesolucionreclamacionprevia">  </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="caso">En el presente caso...</label></div></td>
+                        <td>  <div class="col-md-4">     <textarea class="form-control" id="caso" name="caso" rows="5"></textarea>   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="hechos">Hechos Probados</label> </div></td>
+                        <td>  <div class="col-md-4">     <textarea class="form-control" id="hechos" name="hechos" rows="5"></textarea>   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group"> <label class="col-md-4 control-label" for="prueba">Prueba Practicada</label> </div> </td>
+                        <td><div class="col-md-4"> <select id="prueba" name="prueba" class="form-control" multiple="multiple"> <option value="Testifical">Testifical</option>
+                            <option value="Interrogatorio de la parte actora">Interrogatorio actora</option>
+                            <option value="Interrogatorio de la parte demandada">Interrogatorio demandada</option>
+                            <option value="Pericial">Pericial</option>
+                            <option value="Documental">Documental</option>
+                        </select>
+                        </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="porcentajeadecuado">Porcentaje adecuado</label> </div></td>
+                        <td><div class="col-md-6">   <input id="porcentajeadecuado" name="porcentajeadecuado" type="number" class="form-control input-md">   </div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="numero">Numero del Procedimiento</label> </div></td>
+                        <td><div class="col-md-6">   <input id="numero" name="numero" type="text" placeholder="Numero del Procedimiento" class="form-control input-md">   </div></td>
+
+                        <td><div class="form-group">   <label class="col-md-4 control-label" for="ano">Año del Procedimiento</label></div></td>
+                        <td><div class="col-md-6">   <input id="ano" name="ano" type="text" placeholder="Año del Procedimiento" class="form-control input-md">   </div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <br>
+        <p>
+        <input type="submit" value="Crear Modelo">
+        <input type="reset" value="Limpiar Campos">
+        </form>
+</body>
+</html>
