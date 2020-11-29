@@ -1,11 +1,11 @@
 .titulo h1 {
-  border: 10px solid white;
+  border: 5px solid white;
   margin: auto;
-  width: 30%;
-  padding: 55px;
+  width: 1200px;
+  padding: 5px;
   color: white;
   text-align: center;
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 600;
   font-family: 'Raleway', sans-serif;
 }
@@ -18,62 +18,61 @@ body {
   background-size: cover;
 }
 
-
 .formulario {
   margin: auto;
-  margin-top: 40px;
-  width: 1270px;
-  padding: 40px 30px;
+  margin-top: 20px;
+  width: 1000px;
+  padding: 20px 20px;
   background: rgba(255, 255, 255, 0.7)
 }
 
 label {
     font-family: 'Raleway', sans-serif;
     text-weigth: bold;
-    font-size: 150%;
+    font-size: 105%;
+    text-shadow: 2px 2px 8px #A9A9A9;
 }
 
 legend {
     font-family: 'Raleway', sans-serif;
     text-weigth: bold;
-    font-size: 120%;
+    font-size: 90%;
 }
 
 input, select, textarea {
-  padding:10px;
-  margin:10px 0;
+  padding:9px;
+  margin:4px 0;
   border:0;
-  width: 80%;
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  width: 65%;
+  box-shadow:0 0 15px 10px rgba(0,0,0,0.06);
   resize: none;
   border-radius:10px;
   font-family: 'Raleway', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 select {
-    width: 86%;
+    width: 71%;
 }
 
 table {
-    width: 1150px;
-    float: left;
-    margin: 20px 30px;
+    width: 900px;
+    margin: 10px auto;
 }
 
 .seleccion{
     display:inline-block;
-    padding:0.35em 1.2em;
-    border:0.1em solid #000000;
+    padding:0.2em 1.2em;
+    border:0.01em solid #000000;
     margin:0 0.3em 0.3em 0;
     border-radius:0.12em;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Raleway',sans-serif;
-    font-weight:300;
-    font-size: 20px;
+    font-size: 16px;
     color:#000000;
     text-align:center;
+    text-shadow: 2px 2px 8px #A9A9A9;
     transition: all 0.2s;
     background: transparent;
     width: 300px;
@@ -104,6 +103,7 @@ input[type=submit], input[type=reset] {
     font-weight:300;
     color:#000000;
     text-align:center;
+    text-shadow: 2px 2px 8px #A9A9A9;
     transition: all 0.2s;
     background: transparent;
     width: 300px;
